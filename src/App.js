@@ -1,22 +1,25 @@
-
 import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
-  
-  state ={
-    count :0,
+  constructor (){
+    super();
+
+    this.state ={
+      value:0
+    };
   }
 
-  incrementar = () =>{
-  this.setState({ count: this.state.count + 1})
+  Incrementa = ()=>{
+    this.setState({value:this.state.value+1});
+
   }
 
   render() {
     return (
-      <div className ="App">
-        <p>{this.state.count}</p>
-        <button onClick={this.incrementar}>Incrementa</button>
+      <div>
+        <span className="value">{this.state.value}</span>
+        <button onClick={this.Incrementa} id="inc">Incrementa</button>
       </div>
     );
   }
